@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:e_learning_app/biotechnology_page.dart';
 
 class FirstPage extends StatefulWidget {
   const FirstPage({super.key});
@@ -12,10 +13,10 @@ class _FirstPageState extends State<FirstPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        physics: AlwaysScrollableScrollPhysics(),
+        physics: const AlwaysScrollableScrollPhysics(),
         scrollDirection: Axis.vertical,
         child: Container(
-          padding: EdgeInsets.fromLTRB(30, 30, 30, 30),
+          padding: const EdgeInsets.fromLTRB(30, 30, 30, 30),
           color: Colors.white,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -23,7 +24,7 @@ class _FirstPageState extends State<FirstPage> {
               Row(
                 children: [
                   Container(
-                    padding: EdgeInsets.fromLTRB(15, 10, 15, 10),
+                    padding: const EdgeInsets.fromLTRB(15, 10, 15, 10),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(5),
                       color: Colors.brown.shade400,
@@ -36,12 +37,12 @@ class _FirstPageState extends State<FirstPage> {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 20,
                   ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
+                    children: const [
                       Text(
                         'Hi, Smith',
                         style: TextStyle(
@@ -60,11 +61,11 @@ class _FirstPageState extends State<FirstPage> {
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 172,
                   ),
                   Container(
-                    padding: EdgeInsets.fromLTRB(10, 8, 10, 8),
+                    padding: const EdgeInsets.fromLTRB(10, 8, 10, 8),
                     decoration: BoxDecoration(
                       color: Colors.grey.shade100,
                       borderRadius: BorderRadius.circular(10),
@@ -77,10 +78,10 @@ class _FirstPageState extends State<FirstPage> {
                   )
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
-              Text(
+              const Text(
                 'What do you want to learn?',
                 style: TextStyle(
                   color: Color.fromARGB(255, 27, 63, 116),
@@ -88,7 +89,7 @@ class _FirstPageState extends State<FirstPage> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Container(
@@ -135,21 +136,21 @@ class _FirstPageState extends State<FirstPage> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               SingleChildScrollView(
-                physics: AlwaysScrollableScrollPhysics(),
+                physics: const AlwaysScrollableScrollPhysics(),
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
                     Container(
-                      padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                      padding: const EdgeInsets.fromLTRB(10, 5, 10, 5),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.indigo,
                       ),
-                      child: Text(
+                      child: const Text(
                         "Science",
                         style: TextStyle(
                           color: Colors.white,
@@ -157,7 +158,7 @@ class _FirstPageState extends State<FirstPage> {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 15,
                     ),
                     Container(
@@ -166,7 +167,7 @@ class _FirstPageState extends State<FirstPage> {
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.grey.shade100,
                       ),
-                      child: Text(
+                      child: const Text(
                         "Mathematics",
                         style: TextStyle(
                           color: Colors.black38,
@@ -174,16 +175,16 @@ class _FirstPageState extends State<FirstPage> {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 15,
                     ),
                     Container(
-                      padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                      padding: const EdgeInsets.fromLTRB(10, 5, 10, 5),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.grey.shade100,
                       ),
-                      child: Text(
+                      child: const Text(
                         "Technology",
                         style: TextStyle(
                           color: Colors.black38,
@@ -191,16 +192,16 @@ class _FirstPageState extends State<FirstPage> {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 15,
                     ),
                     Container(
-                      padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                      padding: const EdgeInsets.fromLTRB(10, 5, 10, 5),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.grey.shade100,
                       ),
-                      child: Text(
+                      child: const Text(
                         "Marketing",
                         style: TextStyle(
                           color: Colors.black38,
@@ -211,97 +212,107 @@ class _FirstPageState extends State<FirstPage> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               SingleChildScrollView(
-                physics: AlwaysScrollableScrollPhysics(),
+                physics: const AlwaysScrollableScrollPhysics(),
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
                     Stack(
                       alignment: Alignment.topRight,
                       children: [
-                        Container(
-                          decoration: BoxDecoration(
-                            color: Colors.grey.shade50,
-                            borderRadius: BorderRadius.circular(
-                              25,
+                        TextButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => BiotechnologyPage(),
+                              ),
+                            );
+                          },
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: Colors.grey.shade50,
+                              borderRadius: BorderRadius.circular(
+                                25,
+                              ),
                             ),
-                          ),
-                          padding: EdgeInsets.fromLTRB(20, 180, 20, 20),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Row(
-                                children: [
-                                  CircleAvatar(
-                                    backgroundColor: Colors.amber.shade100,
-                                    child: Text(
-                                      "JG",
-                                      style: TextStyle(
-                                        color: Colors.blue.shade50,
+                            padding: const EdgeInsets.fromLTRB(20, 180, 20, 20),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(
+                                  children: [
+                                    CircleAvatar(
+                                      backgroundColor: Colors.amber.shade100,
+                                      child: Text(
+                                        "JG",
+                                        style: TextStyle(
+                                          color: Colors.blue.shade50,
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                  SizedBox(
-                                    width: 12,
-                                  ),
-                                  Text(
-                                    'Joseph Grover',
-                                    style: TextStyle(
-                                      color: Colors.black45,
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.bold,
+                                    const SizedBox(
+                                      width: 12,
                                     ),
-                                  )
-                                ],
-                              ),
-                              SizedBox(
-                                height: 15,
-                              ),
-                              Text(
-                                "Biotechnology",
-                                style: TextStyle(
-                                  color: Color.fromARGB(255, 27, 63, 116),
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
+                                    const Text(
+                                      'Joseph Grover',
+                                      style: TextStyle(
+                                        color: Colors.black45,
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    )
+                                  ],
                                 ),
-                              ),
-                              Row(
-                                children: [
-                                  Icon(
-                                    Icons.access_time,
-                                    color: Colors.black26,
+                                const SizedBox(
+                                  height: 15,
+                                ),
+                                const Text(
+                                  "Biotechnology",
+                                  style: TextStyle(
+                                    color: Color.fromARGB(255, 27, 63, 116),
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
                                   ),
-                                  SizedBox(
-                                    width: 8,
-                                  ),
-                                  Text(
-                                    '8h 30min . 25 Lessons',
-                                    style: TextStyle(
-                                      color: Colors.black38,
+                                ),
+                                Row(
+                                  children: [
+                                    const Icon(
+                                      Icons.access_time,
+                                      color: Colors.black26,
                                     ),
-                                  ),
-                                  SizedBox(
-                                    width: 20,
-                                  ),
-                                  Icon(
-                                    Icons.star,
-                                    color: Colors.amber.shade600,
-                                  ),
-                                  Text(
-                                    "4.9",
-                                    style: TextStyle(
-                                      color: Colors.black38,
+                                    const SizedBox(
+                                      width: 8,
                                     ),
-                                  )
-                                ],
-                              )
-                            ],
+                                    const Text(
+                                      '8h 30min . 25 Lessons',
+                                      style: TextStyle(
+                                        color: Colors.black38,
+                                      ),
+                                    ),
+                                    const SizedBox(
+                                      width: 20,
+                                    ),
+                                    Icon(
+                                      Icons.star,
+                                      color: Colors.amber.shade600,
+                                    ),
+                                    const Text(
+                                      "4.9",
+                                      style: TextStyle(
+                                        color: Colors.black38,
+                                      ),
+                                    )
+                                  ],
+                                )
+                              ],
+                            ),
                           ),
                         ),
-                        Image(
+                        const Image(
                           image: AssetImage('images/lab.jpg'),
                           width: 250,
                           height: 200,
@@ -309,7 +320,7 @@ class _FirstPageState extends State<FirstPage> {
                         ),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 20,
                     ),
                     Stack(
@@ -322,7 +333,7 @@ class _FirstPageState extends State<FirstPage> {
                               25,
                             ),
                           ),
-                          padding: EdgeInsets.fromLTRB(20, 180, 20, 20),
+                          padding: const EdgeInsets.fromLTRB(20, 180, 20, 20),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -337,10 +348,10 @@ class _FirstPageState extends State<FirstPage> {
                                       ),
                                     ),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     width: 12,
                                   ),
-                                  Text(
+                                  const Text(
                                     'Alexis Brown',
                                     style: TextStyle(
                                       color: Colors.black45,
@@ -350,10 +361,10 @@ class _FirstPageState extends State<FirstPage> {
                                   )
                                 ],
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 15,
                               ),
-                              Text(
+                              const Text(
                                 "Physics",
                                 style: TextStyle(
                                   color: Color.fromARGB(255, 27, 63, 116),
@@ -363,27 +374,27 @@ class _FirstPageState extends State<FirstPage> {
                               ),
                               Row(
                                 children: [
-                                  Icon(
+                                  const Icon(
                                     Icons.access_time,
                                     color: Colors.black26,
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     width: 8,
                                   ),
-                                  Text(
+                                  const Text(
                                     '4h 45min . 12 Lessons',
                                     style: TextStyle(
                                       color: Colors.black38,
                                     ),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     width: 20,
                                   ),
                                   Icon(
                                     Icons.star,
                                     color: Colors.amber.shade600,
                                   ),
-                                  Text(
+                                  const Text(
                                     "4.4",
                                     style: TextStyle(
                                       color: Colors.black38,
@@ -412,8 +423,8 @@ class _FirstPageState extends State<FirstPage> {
       bottomNavigationBar: ButtonBar(
         children: [
           Container(
-            padding: EdgeInsets.fromLTRB(20, 15, 20, 15),
-            decoration: BoxDecoration(),
+            padding: const EdgeInsets.fromLTRB(20, 15, 20, 15),
+            decoration: const BoxDecoration(),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -422,12 +433,12 @@ class _FirstPageState extends State<FirstPage> {
                     backgroundColor: Colors.transparent,
                   ),
                   onPressed: () {},
-                  child: Icon(
+                  child: const Icon(
                     Icons.home_outlined,
                     color: Colors.black26,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 72,
                 ),
                 TextButton(
@@ -436,12 +447,12 @@ class _FirstPageState extends State<FirstPage> {
                     surfaceTintColor: Colors.blue.shade800,
                   ),
                   onPressed: () {},
-                  child: Icon(
+                  child: const Icon(
                     Icons.data_thresholding_outlined,
                     color: Colors.black26,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 72,
                 ),
                 TextButton(
@@ -449,12 +460,12 @@ class _FirstPageState extends State<FirstPage> {
                     backgroundColor: Colors.transparent,
                   ),
                   onPressed: () {},
-                  child: Icon(
+                  child: const Icon(
                     Icons.arrow_circle_right_outlined,
                     color: Colors.black26,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 72,
                 ),
                 TextButton(
@@ -462,7 +473,7 @@ class _FirstPageState extends State<FirstPage> {
                     backgroundColor: Colors.transparent,
                   ),
                   onPressed: () {},
-                  child: Icon(
+                  child: const Icon(
                     Icons.calendar_month,
                     color: Colors.black26,
                   ),

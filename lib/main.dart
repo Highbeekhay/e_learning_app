@@ -36,15 +36,15 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image(
+              const Image(
                 image: AssetImage('images/education1.jpg'),
                 height: 500,
                 width: 2000,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
-              Text(
+              const Text(
                 'Best Online Course',
                 style: TextStyle(
                   fontSize: 30,
@@ -54,10 +54,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   color: Color.fromARGB(255, 4, 14, 65),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              Text(
+              const Text(
                 'Discover the things you want to',
                 style: TextStyle(
                   color: Colors.black38,
@@ -65,7 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   wordSpacing: 3,
                 ),
               ),
-              Text(
+              const Text(
                 'learn and grow with them.',
                 style: TextStyle(
                   color: Colors.black38,
@@ -73,21 +73,21 @@ class _MyHomePageState extends State<MyHomePage> {
                   wordSpacing: 3,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   elevation: 200,
-                  backgroundColor: Color.fromARGB(255, 71, 90, 198),
-                  shape: CircleBorder(),
-                  padding: EdgeInsets.all(25),
+                  backgroundColor: const Color.fromARGB(255, 71, 90, 198),
+                  shape: const CircleBorder(),
+                  padding: const EdgeInsets.all(25),
                 ),
                 onPressed: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => FirstPage(),
+                      builder: (context) => const FirstPage(),
                     ),
                   );
                 },
