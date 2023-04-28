@@ -1,4 +1,5 @@
 import 'package:e_learning_app/activity_page.dart';
+import 'package:e_learning_app/courses_page.dart';
 import 'package:flutter/material.dart';
 import 'package:e_learning_app/biotechnology_page.dart';
 
@@ -467,7 +468,14 @@ class _FirstPageState extends State<FirstPage> {
                   style: TextButton.styleFrom(
                     backgroundColor: Colors.transparent,
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => CoursesPage(),
+                      ),
+                    );
+                  },
                   child: const Icon(
                     Icons.arrow_circle_right_outlined,
                     color: Colors.black26,
