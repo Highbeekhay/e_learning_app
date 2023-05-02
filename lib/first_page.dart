@@ -1,5 +1,6 @@
 import 'package:e_learning_app/activity_page.dart';
 import 'package:e_learning_app/courses_page.dart';
+import 'package:e_learning_app/notification_page.dart';
 import 'package:flutter/material.dart';
 import 'package:e_learning_app/biotechnology_page.dart';
 
@@ -64,20 +65,35 @@ class _FirstPageState extends State<FirstPage> {
                     ],
                   ),
                   const SizedBox(
-                    width: 172,
+                    width: 166,
                   ),
-                  Container(
-                    padding: const EdgeInsets.fromLTRB(10, 8, 10, 8),
-                    decoration: BoxDecoration(
-                      color: Colors.grey.shade100,
-                      borderRadius: BorderRadius.circular(10),
+                  TextButton(
+                    style: ButtonStyle(
+                      shape: MaterialStatePropertyAll(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                      ),
+                      padding: MaterialStatePropertyAll(
+                        EdgeInsets.fromLTRB(13, 13, 13, 13),
+                      ),
+                      backgroundColor:
+                          MaterialStateProperty.all(Colors.grey.shade100),
                     ),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => NotificationPage(),
+                        ),
+                      );
+                    },
                     child: Icon(
                       Icons.notifications_none_outlined,
                       color: Colors.blue.shade900,
                       size: 30,
                     ),
-                  )
+                  ),
                 ],
               ),
               const SizedBox(
