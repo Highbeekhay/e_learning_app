@@ -1,5 +1,6 @@
 import 'package:e_learning_app/activity_page.dart';
 import 'package:e_learning_app/courses_page.dart';
+import 'package:e_learning_app/mentor_page.dart';
 import 'package:e_learning_app/notification_page.dart';
 import 'package:flutter/material.dart';
 import 'package:e_learning_app/biotechnology_page.dart';
@@ -74,7 +75,7 @@ class _FirstPageState extends State<FirstPage> {
                           borderRadius: BorderRadius.circular(5),
                         ),
                       ),
-                      padding: MaterialStatePropertyAll(
+                      padding: const MaterialStatePropertyAll(
                         EdgeInsets.fromLTRB(13, 13, 13, 13),
                       ),
                       backgroundColor:
@@ -84,7 +85,7 @@ class _FirstPageState extends State<FirstPage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => NotificationPage(),
+                          builder: (context) => const NotificationPage(),
                         ),
                       );
                     },
@@ -504,7 +505,14 @@ class _FirstPageState extends State<FirstPage> {
                   style: TextButton.styleFrom(
                     backgroundColor: Colors.transparent,
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const MentorPage(),
+                      ),
+                    );
+                  },
                   child: const Icon(
                     Icons.calendar_month,
                     color: Colors.black26,
