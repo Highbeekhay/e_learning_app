@@ -1,3 +1,4 @@
+import 'package:e_learning_app/robert_page.dart';
 import 'package:flutter/material.dart';
 
 class MentorPage extends StatefulWidget {
@@ -64,7 +65,14 @@ class _MentorPageState extends State<MentorPage> {
                           CircleBorder(),
                         ),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => RobertPage(),
+                          ),
+                        );
+                      },
                       child: Text(
                         'JP',
                         style: TextStyle(
